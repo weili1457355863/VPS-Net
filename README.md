@@ -12,10 +12,12 @@ We ran our experiments with PyTorch 1.0.1, CUDA 9.0, Conda with Python 3.6 and U
     $ pip install -r requirements.txt
 
 ##### Download pretrained weights
+    $ mkdir weights
     $ cd weights/
 Download the [parking slot detection weights]() and the [paking slot occcupancy classification weights]() 
 
 ##### Download ps2.0 and PSV dataset
+    $ mkdir data
     $ cd data/
 Download the [ps2.0 dataset]() or the [PSV dataset]() 
 

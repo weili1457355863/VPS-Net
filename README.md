@@ -5,7 +5,7 @@ A vacant parking slot detection method in the around view image based on deep le
 We ran our experiments with PyTorch 1.0.1, CUDA 9.0, Conda with Python 3.6 and Ubuntu 16.04.
 ## Installation
 ##### Clone and install requirements
-    $ git clone https://github.com/eriklindernoren/PyTorch-YOLOv3
+    $ git clone https://github.com/weili1457355863/VPS-Net.git
     $ cd VPS-Net
     $ conda create --name vps-net python=3.6
     $ conda activate vps-net
@@ -14,12 +14,12 @@ We ran our experiments with PyTorch 1.0.1, CUDA 9.0, Conda with Python 3.6 and U
 ##### Download pretrained weights
     $ mkdir weights
     $ cd weights/
-Download the [parking slot detection weights]() and the [paking slot occcupancy classification weights]() 
+Download the [weights](https://drive.google.com/file/d/1mkrQ5ehgZY5iOM3HnXR5hPBw1kjXXo6a/view?usp=sharing) of detection network and classification network.
 
 ##### Download ps2.0 and PSV dataset
     $ mkdir data
     $ cd data/
-Download the [ps2.0 dataset]() or the [PSV dataset]() 
+Download the [ps2.0 dataset](https://cslinzhang.github.io/deepps/) or the [PSV dataset](http://cs1.tongji.edu.cn/tiev/resourse/) 
 
 ## Test
 Uses pretrained weights to detect the vacant parking slot in the around view image.
@@ -44,5 +44,5 @@ $ python vps_net.py --input_folder data/ps2.0/testing/all --save_files 1
 <p align="center"><img src="assets/results.png" width="480"\></p>
 
 ## Exral annotations
-In order to facilitate other researchers, the [annoations]() for vacant parking slots of ps 2.0 and PSV datasets has been 
+In order to facilitate other researchers, the [annoations](https://drive.google.com/file/d/17fU2o-Auh9JHvT5x0K9inExC8BoGf787/view?usp=sharing) for vacant parking slots of ps 2.0 and PSV datasets has been 
 made publicly avaliable.

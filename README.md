@@ -43,6 +43,6 @@ $ python vps_net.py --input_folder data/ps2.0/testing/all --save_files 1
 #### Testing results
 <p align="center"><img src="assets/results.png" width="480"\></p>
 
-## Extral annotations
-In order to facilitate other researchers, the [annoations](https://drive.google.com/file/d/17fU2o-Auh9JHvT5x0K9inExC8BoGf787/view?usp=sharing) for vacant parking slots of ps 2.0 and PSV datasets has been 
+## Extral annotation
+In order to facilitate other researchers, the [annoation](https://drive.google.com/file/d/17fU2o-Auh9JHvT5x0K9inExC8BoGf787/view?usp=sharing) for vacant parking slots of ps 2.0 and PSV datasets has been 
 made publicly avaliable.

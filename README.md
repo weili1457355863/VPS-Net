@@ -46,3 +46,19 @@ $ python vps_net.py --input_folder data/ps2.0/testing/all --save_files 1
 ## Extral annotation
 In order to facilitate other researchers, the [annoation](https://drive.google.com/file/d/1IQxiXrfdIxfpHaTWyXGHQCvZUSRMTGSK/view?usp=sharing) for vacant parking slots of ps 2.0 and PSV datasets has been 
 made publicly avaliable.
+
+## Citation
+```
+@article{li_vacant_2020,
+	title = {Vacant Parking Slot Detection in the Around View Image Based on Deep Learning},
+	volume = {20},
+	doi = {10.3390/s20072138},
+	pages = {2138},
+	journal = {Sensors},
+	author = {Li, Wei and Cao, Libo and Yan, Lingbo and Li, Chaohui and Feng, Xiexing and Zhao, Peijie},
+	date = {2020-04-10}
+}
+
+```
+
+

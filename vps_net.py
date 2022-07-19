@@ -20,6 +20,16 @@ from vps_detect.ps_detect import PsDetect
 from vps_detect.vps_classify import vpsClassify
 from utils.utils import compute_four_points
 
+# add image types at will
+img_types = ["jpg", 'bmp', 'png']
+
+
+def get_images_from_folder(path):
+    images = []
+    [images.extand(glob.glob(os.path.join(path,"*." + img_type))) for img_type in img_types]
+    return images
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_folder", type=str, default="data/outdoor-rainy", help="path to dataset")
@@ -35,6 +45,8 @@ if __name__ == "__main__":
     parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
     parser.add_argument("--save_files", type=bool, default=False, help="save detected results")
     opt = parser.parse_args()
+    
+    opt.output_folder = os.path.normpath(opt.output_folder)
 
     os.makedirs(opt.output_folder, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -43,12 +55,12 @@ if __name__ == "__main__":
     vps_classify = vpsClassify(opt.weights_path_vps, device)
 
     with torch.no_grad():
-        imgs_list = glob.glob(opt.input_folder + '/*.jpg')
-        print(opt.input_folder)
-        print(len(imgs_list))
+        imgs_list = get_images_from_folder(opt.input_folder)
+        print("input_folder: " + opt.input_folder)
+        print("number of images: " + str(len(imgs_list)))
         for img_path in tqdm.tqdm(imgs_list):
             if opt.save_files:
-                img_name = img_path.split('/')[-1]
+                img_name = os.path.split(img_path)[1]
                 filename = img_name.split('.')[0] + '.txt'
                 file_path = os.path.join(opt.output_folder, filename)
                 file = open(file_path, 'w')

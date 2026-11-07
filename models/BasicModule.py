@@ -17,7 +17,7 @@ class BasicModule(nn.Module):
         :param path:加载模型的地址
         :return:
         '''
-        self.load_state_dict(torch.load(path))
+        self.load_state_dict(torch.load(path, weights_only=True))
 
     def save(self,model_name, epoch):
         '''
